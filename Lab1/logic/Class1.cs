@@ -42,7 +42,8 @@ namespace Lab1.logic
             double num = Math.Cos(x + 2);
             num *= num;                                          // cos^2
             double den = Math.Exp(-2.0 * x) + Math.Pow(3.0 * x * x, 0.25) + 1.0;
-            return num / den;                                    // знаменник завжди > 1
+            //return num / den;                                    // знаменник завжди > 1
+            return Math.Pow(x, 3);
         }
 
         private double F(double x, double a)

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
@@ -40,7 +42,17 @@
             dataGridView1 = new DataGridView();
             x = new DataGridViewTextBoxColumn();
             y = new DataGridViewTextBoxColumn();
+            imageList1 = new ImageList(components);
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            menuStrip1 = new MenuStrip();
+            масивиToolStripMenuItem = new ToolStripMenuItem();
+            одновимірнийМасивToolStripMenuItem = new ToolStripMenuItem();
+            двовимірнийМасивToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // textBox1
@@ -65,6 +77,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(150, 31);
             textBox3.TabIndex = 2;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox4
             // 
@@ -76,7 +89,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(36, 23);
+            label1.Location = new Point(0, 58);
             label1.Name = "label1";
             label1.Size = new Size(33, 25);
             label1.TabIndex = 4;
@@ -86,7 +99,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(261, 24);
+            label2.Location = new Point(222, 64);
             label2.Name = "label2";
             label2.Size = new Size(33, 25);
             label2.TabIndex = 5;
@@ -96,7 +109,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(493, 23);
+            label3.Location = new Point(465, 61);
             label3.Name = "label3";
             label3.Size = new Size(22, 25);
             label3.TabIndex = 6;
@@ -105,7 +118,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(711, 23);
+            label4.Location = new Point(684, 58);
             label4.Name = "label4";
             label4.Size = new Size(21, 25);
             label4.TabIndex = 7;
@@ -149,11 +162,71 @@
             y.ReadOnly = true;
             y.Width = 150;
             // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageSize = new Size(16, 16);
+            imageList1.TransparentColor = Color.Transparent;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(680, 142);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(406, 143);
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(647, 315);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(750, 216);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 11;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { масивиToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1423, 33);
+            menuStrip1.TabIndex = 12;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // масивиToolStripMenuItem
+            // 
+            масивиToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { одновимірнийМасивToolStripMenuItem, двовимірнийМасивToolStripMenuItem });
+            масивиToolStripMenuItem.Name = "масивиToolStripMenuItem";
+            масивиToolStripMenuItem.Size = new Size(91, 29);
+            масивиToolStripMenuItem.Text = "Масиви";
+            // 
+            // одновимірнийМасивToolStripMenuItem
+            // 
+            одновимірнийМасивToolStripMenuItem.Name = "одновимірнийМасивToolStripMenuItem";
+            одновимірнийМасивToolStripMenuItem.Size = new Size(292, 34);
+            одновимірнийМасивToolStripMenuItem.Text = "Одновимірний масив";
+            одновимірнийМасивToolStripMenuItem.Click += одновимірнийМасивToolStripMenuItem_Click;
+            // 
+            // двовимірнийМасивToolStripMenuItem
+            // 
+            двовимірнийМасивToolStripMenuItem.Name = "двовимірнийМасивToolStripMenuItem";
+            двовимірнийМасивToolStripMenuItem.Size = new Size(292, 34);
+            двовимірнийМасивToolStripMenuItem.Text = "Двовимірний масив";
+            двовимірнийМасивToolStripMenuItem.Click += двовимірнийМасивToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1423, 820);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(label4);
@@ -164,10 +237,16 @@
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,5 +265,12 @@
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn x;
         private DataGridViewTextBoxColumn y;
+        private ImageList imageList1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem масивиToolStripMenuItem;
+        private ToolStripMenuItem одновимірнийМасивToolStripMenuItem;
+        private ToolStripMenuItem двовимірнийМасивToolStripMenuItem;
     }
 }
