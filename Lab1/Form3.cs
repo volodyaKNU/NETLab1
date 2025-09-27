@@ -47,7 +47,7 @@ namespace Lab1
 
             var res = arr.PositionInfo;
             label3.Text = $"Позиція: {res.Item4}";
-            label4.Text = $"Індекс: [{res.Item2}{res.Item3}]";
+            label4.Text = $"Індекс: [{res.Item2},{res.Item3}]";
             label5.Text = $"Значення: {res.Item1}";
         }
 

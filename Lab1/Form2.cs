@@ -51,7 +51,7 @@ namespace Lab1
             dataGridView1.Rows.Clear();
             try
             {
-                int decade = Convert.ToInt32(textBox1.Text);
+                int decade = Convert.ToInt32(textBox1.Text) >  3 ? 3 : Convert.ToInt32(textBox1.Text);
                 Arrays arr = new();
                 var result = arr.Sum;
 

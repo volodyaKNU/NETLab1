@@ -49,6 +49,8 @@
             масивиToolStripMenuItem = new ToolStripMenuItem();
             одновимірнийМасивToolStripMenuItem = new ToolStripMenuItem();
             двовимірнийМасивToolStripMenuItem = new ToolStripMenuItem();
+            тестиToolStripMenuItem = new ToolStripMenuItem();
+            завдання1ToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -192,7 +194,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { масивиToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { масивиToolStripMenuItem, тестиToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1423, 33);
@@ -205,6 +207,7 @@
             масивиToolStripMenuItem.Name = "масивиToolStripMenuItem";
             масивиToolStripMenuItem.Size = new Size(91, 29);
             масивиToolStripMenuItem.Text = "Масиви";
+            масивиToolStripMenuItem.Click += масивиToolStripMenuItem_Click;
             // 
             // одновимірнийМасивToolStripMenuItem
             // 
@@ -219,6 +222,20 @@
             двовимірнийМасивToolStripMenuItem.Size = new Size(292, 34);
             двовимірнийМасивToolStripMenuItem.Text = "Двовимірний масив";
             двовимірнийМасивToolStripMenuItem.Click += двовимірнийМасивToolStripMenuItem_Click;
+            // 
+            // тестиToolStripMenuItem
+            // 
+            тестиToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { завдання1ToolStripMenuItem });
+            тестиToolStripMenuItem.Name = "тестиToolStripMenuItem";
+            тестиToolStripMenuItem.Size = new Size(71, 29);
+            тестиToolStripMenuItem.Text = "Тести";
+            // 
+            // завдання1ToolStripMenuItem
+            // 
+            завдання1ToolStripMenuItem.Name = "завдання1ToolStripMenuItem";
+            завдання1ToolStripMenuItem.Size = new Size(270, 34);
+            завдання1ToolStripMenuItem.Text = "Завдання 1";
+            завдання1ToolStripMenuItem.Click += завдання1ToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -272,5 +289,7 @@
         private ToolStripMenuItem масивиToolStripMenuItem;
         private ToolStripMenuItem одновимірнийМасивToolStripMenuItem;
         private ToolStripMenuItem двовимірнийМасивToolStripMenuItem;
+        private ToolStripMenuItem тестиToolStripMenuItem;
+        private ToolStripMenuItem завдання1ToolStripMenuItem;
     }
 }

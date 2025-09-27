@@ -111,5 +111,17 @@ namespace Lab1
         {
 
         }
+
+        private void завдання1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTest4 f = new();
+            f.Show();
+            this.Hide();
+        }
+
+        private void масивиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
